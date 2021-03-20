@@ -16,8 +16,5 @@ WORKDIR /app
 RUN apt-get update
 
 RUN apt-get install -y git
-RUN git config --global user.email "$GIT_EMAIL"
-RUN git config --global user.name "$GIT_USERNAME"
-RUN git config --global user.password "$GIT_PASSWORD"
 
 CMD [ "sh", "/app/run.sh" ]
