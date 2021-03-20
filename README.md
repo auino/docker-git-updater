@@ -14,7 +14,7 @@ Following environment variables have to be set up:
 * `GIT_USERNAME` the git username to use
 * `SSH_KEYTYPE` the SSH keys type (e.g. `rsa` or `ed25519`)
 * `SSH_PUBKEY` the raw public key
-* `SSH_PRIVKEY` the raw private key (without any space or newline)
+* `SSH_PRIVKEY` the raw private key (with spaces instead of newlines)
 * `FILES_TO_COMMIT` the comma-separated list of files to commit, or `.` to commit the entire volume content
 
 ### Shared volume directory ###
