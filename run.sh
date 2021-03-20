@@ -8,8 +8,10 @@ echo "-----END OPENSSH PRIVATE KEY-----" >> /root/.ssh/id_${SSH_KEYTYPE}
 
 chmod 600 /root/.ssh/* 2> /dev/null
 
-git config --global user.email "$GIT_EMAIL"
-git config --global user.name "$GIT_USERNAME"
+git config --global user.email "${GIT_EMAIL}"
+git config --global user.name "${GIT_USERNAME}"
+
+ssh -o "StrictHostKeyChecking no" "${GIT_EMAIL}"
 
 cd /app
 git clone "${GIT_REPOSITORY}" git
